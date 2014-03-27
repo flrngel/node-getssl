@@ -1,0 +1,14 @@
+{
+  "name": "node-getssl",
+  "version": "0.1.0",
+  "description": "node-getssl",
+  "main": "getSSL.js",
+  "repository": {
+    "type": "git",
+    "url": "https://flrngel@github.com/flrngel/node-getssl.git"
+  },
+	"author": "flrngel",
+  "bugs": {
+    "url": "https://github.com/flrngel/node-getssl/issues"
+  }
+}
