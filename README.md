@@ -1,8 +1,10 @@
-node-getssl
-===========
+# node-getssl
 
 get ssl information with nodejs
 
-module
-======
+# module
 ./getSSL.js
+
+# using npm
+
+npm install getssl
