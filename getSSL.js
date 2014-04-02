@@ -10,8 +10,11 @@ exports.getSSL=function(url,callback){
 		agent: false
 	};
 
+	var ts=null;
 	var req = https.request(options, function(res){
 		var result=res.connection.getPeerCertificate();
+		if( ts !== null )
+			clearTimeout(ts);
 		if( result && result.subject.CN != null ){
 			callback({
 				"url": result.subject.CN,
@@ -26,7 +29,7 @@ exports.getSSL=function(url,callback){
 	});
 
 	req.on('socket', function (socket) {
-		setTimeout(function(){
+		ts=setTimeout(function(){
 			req.abort();
 			callback(null);
 		},500);
